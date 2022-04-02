@@ -142,7 +142,7 @@
     padding: 1rem;
     max-width:300px;
     margin: 2rem auto;
-
+   
   }
 
 }
@@ -154,12 +154,13 @@ fieldset{
     #formElements{
       display:grid;
     row-gap: .5em;
+   
     }
 #contact input, #contact textarea, #contact select, #contact button{
 
   padding:.5em;
   font-size: 2em;
-
+ 
 }
 
 #contact ul{
@@ -185,5 +186,86 @@ button{
 
 }
 
-    
-     
+    .nav{
+      border-bottom:1px solid var(--clr-graymed);
+
+
+      &__toggle{
+        position: absolute;
+        cursor: pointer;
+        margin: 0rem 1rem;
+        right:0;
+
+        img{
+          width:1.5rem;
+        
+          fill:var(--clr-graymed);
+        }
+        .close{
+          display: none;
+        }
+
+        .menu{
+          margin-top:0.2rem;
+        }
+      }
+
+      &__checkbox{
+        display:none;
+      }
+
+      &__menu{
+        display:flex;
+        flex-direction: column;
+        gap:2rem;
+        align-items:center;
+        margin:1rem;
+
+        li{
+          list-style:none;
+          display:none;
+        //  &:first-child{
+       //     margin-right: auto;
+             //display:block;
+      //    }
+        }
+
+        a{
+          text-decoration: none;
+          color:inherit;
+          font-size: 1.2rem;
+        }
+
+       // img{
+     //     width:1.5rem;
+       //   fill: #c4c4c4;
+       // }
+      }
+    }
+
+    #nav__checkbox:checked ~ ul.nav__menu li{
+      display: block;
+    }
+
+    #nav__checkbox:checked ~ label.nav__toggle .close{
+      display:block;
+    }
+
+    #nav__checkbox:checked ~ label .menu{
+      display: none;
+    }
+
+    //desktop
+    @media only screen and (min-width:560px){
+      .nav{
+        &__toggle{
+          display:none;
+        }
+        &__menu{
+          flex-direction: row;
+          li{
+            display:block;
+          }
+        }
+      }
+    }
