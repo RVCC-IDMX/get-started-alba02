@@ -1,6 +1,6 @@
 # Get Started 
 
-This page illustrates the use of using a figma design and implementing it throughout the website. It shows overall responsiveness for many devices, and shows the basics of a website.
+This page illustrates the use of using a figma design and implementing it throughout the website. It shows overall responsiveness for many devices, and shows the basics of a website using contact forms and containers.
 
 ## This website follows a tutorial by Angela on youtube
  [Angela's tutorial on responsiveness](https://www.youtube.com/watch?v=G4Z0E9uEb0o&ab_channel=AngelaDelise)
